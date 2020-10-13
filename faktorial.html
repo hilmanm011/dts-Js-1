@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktorial</title>
+</head>
+<body>
+    Masukan nilai:
+    <input type="text" onchange="hitung()" id="nilai">
+
+    <script>
+        function hitung(){
+            var hasil = faktorial(parseInt(document.getElementById("nilai").value))
+            alert(hasil)
+        }
+        //5! = 5x4x3x2x1 = 120
+        function faktorial(n) {
+            if (n==1){
+                return 1
+            }
+            else{
+                return faktorial(n-1) * n
+            }
+        }
+    </script>
+</body>
+</html>

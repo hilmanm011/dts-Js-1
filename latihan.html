@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+    <script>
+        var variable1 = 5 //variable dengan niali 5
+        var variable2 = 6.0
+        var variable3 = "nilai: "
+        document.getElementById("div1").innerHTML = variable1
+
+        var suhu = 30
+        if(suhu>=37.2){
+            document.getElementById("div3").innerHTML = "suhu tinggi"
+        }
+        else if(suhu = 30){
+            document.getElementById("div3").innerHTML = "suhu normal"
+        }
+        else{
+            document.getElementById("div3").innerHTML = "salah"
+        }
+
+        var n = 80 // nilai
+        //And && =Jika salah satu kondisi berniali salah, maka salah
+        //OR || = Jika salah satu kondisi berniali benar, maka benar
+        if(n >= 85 && n <= 100) {
+            document.getElementById("div4").innerHTML = "A"
+        }
+        else if (n >= 70 && n <= 85){
+            document.getElementById("div4").innerHTML = "B"
+        }
+        else {
+            document.getElementById("div4").innerHTML = "Format Salah"
+        }
+
+        //Perulangan For
+        /*for (var i=0; i < 3; i++){
+            alert("alert-"+i)
+        }*/
+
+        /*n =100
+        for (n=1; n < 100; n++ ){
+            document.getElementById("div6").innerHTML = document.write("<p>"+n+"</p>");
+        }*/
+        var n = 20
+        tmp = ""
+        for(var i=1; i <= n; i++){
+            if(n%i==0){
+                tmp =tmp + i + " adalah faktor dari" +n+ "<br>"
+            }
+        }
+        document.getElementById("div7").innerHTML = tmp
+        //Perulangan While
+        /*var i  = 0 //inisialisasi
+        while (i < 3){ //cek kondisi
+            alert("alert-" + i)//jalankan statment
+            i = i +1  //increment atau decrement
+        }*/
+
+        /*var j =0 //inisialisasi
+        do{ //jalankan statment
+            alert("alert-" + j)
+            j= j +1 //increment
+        }while(j<3)*/ //cek kondisi
+    </script>
+</body>
+</html>
