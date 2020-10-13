@@ -1,43 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 <body>
-    <h4>Kalkulator</h4>
-    <input type="text" id="angkaSatu">
-    <select id="op">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="x">x</option>
-        <option value="/">/</option>
-    </select>
-    <input type="text" id="angkaDua">
-    <input type="submit" onclick="kalkulator()" value="=">
-    <input type="text" id="hasil">
-
+    <div class="container my-5">
+        <div class="card text-center shadow-lg">
+            <div class="card-header">
+                <h4>Kalkulator Sederhana</h4>
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Silahkan input bilangan</h5>
+            <input type="text" id="angkaSatu" placeholder="Bil 1">
+            <input type="text" id="angkaDua" placeholder="Bil 2">
+            <p class="card-text my-3"><select id="op">
+                <option value="">Pilih Operasi</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="x">x</option>
+                <option value="/">/</option>
+            </select></p>
+            <a href="#" class="btn btn-warning my-3" type="submit" onclick="kalkulator()" value="=">Hitung</a> <br>
+            <input type="text" id="hasil" placeholder="Hasil">
+        </div>
+    </div>
     <script language="JavaScript" type="text/javascript">
         function kalkulator() {
-
-            //variable angka satu
             var angkaSatu = parseInt(document.getElementById("angkaSatu").value);
-
-            //variable angka dua
             var angkaDua = parseInt(document.getElementById("angkaDua").value);
 
             //variable operasi aritmatik
             var op = document.getElementById("op").value;
-
-            //variable angka hasil
+            //hasil
             var hasil = document.getElementById("hasil");
-
-            //variable untuk total angka satu dan angka dua
+            //variable total
             var total;
-
             if (isNaN(angkaSatu) || isNaN(angkaDua)) {
                 alert('isi form dengan angka!')
-
-            } else {
-
+            } 
+            else 
+            {
                 if (op == "+") {
                     total = angkaSatu + angkaDua;
                 } else if (op == "-") {
@@ -48,9 +55,13 @@
                     total = angkaSatu / angkaDua;
                 }
             }
-
             hasil.value = total;
         }
     </script>
+
+    <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
